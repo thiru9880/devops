@@ -7,8 +7,7 @@
 # -contains : 
 
 $servers = @('google.com', 'facebook.com', 'thiru')
-Write-Output $servers in one line
-Write-Output "also this"
+Write-Output $servers 
 foreach ($servername in $servers) {
     $serverstatus = Test-Connection -ComputerName $servername -Quiet -Count 1
 
@@ -18,4 +17,8 @@ foreach ($servername in $servers) {
     else {
         Write-Output "$servername is down"
     }
+}
+
+for($index = 10; $index -le 15; $index++){
+    Write-Output $index
 }
