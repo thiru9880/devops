@@ -22,3 +22,6 @@ foreach ($servername in $servers) {
 for($index = 10; $index -le 15; $index++){
     Write-Output $index
 }
+
+$new = get-process
+Write-Output $new 
