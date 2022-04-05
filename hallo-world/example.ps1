@@ -1,12 +1,9 @@
-$service = 'W3SVC'
+$serviceName = 'SENS'
+$service = Get-Service -Name $serviceName
 
-$serviceName = Get-Service -Name $service
-
-if ($serviceName.Status -eq 'Running'){
+if ($service.Status -eq 'Running'){
     Write-Output 'service is running'
-    Write-Output $service
 }
 else {
     Write-Output 'service is not running'
-    Write-Output $service
 }
